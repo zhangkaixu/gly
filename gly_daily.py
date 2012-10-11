@@ -21,7 +21,12 @@ for t,i,o,s in records:
 daily=[[k,max(v)] for k,v in daily.items()]
 daily=sorted(daily)
 file=open("gly30.html",'w')
-html="""<b>鼓浪屿每日最高在岛人数</b><br/>"""
+html="""
+<head>
+
+</head>
+
+<b>鼓浪屿每日最高在岛人数</b><br/>"""
 print(html,file=file)
 for d,s in daily[-30:]:
     x=round(s//1000)
