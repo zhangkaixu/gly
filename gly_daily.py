@@ -38,7 +38,9 @@ html="""
         </script>
 </head>
 
-<b>鼓浪屿每日最高在岛人数</b><br/>"""
+<b>鼓浪屿每日在岛人数峰值</b>(包括常住人口1.5万左右)<br/>
+由<a href="http://weibo.com/zhangkaixu">@张开旭XMU</a>发布<br/>
+"""
 print(html,file=file)
 for d,s in daily[-30:]:
     x=round(s//1000)
