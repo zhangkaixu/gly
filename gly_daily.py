@@ -23,6 +23,8 @@ daily=sorted(daily)
 file=open("gly30.html",'w')
 html="""
 <head>
+<title>鼓浪屿每日在岛人数</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
