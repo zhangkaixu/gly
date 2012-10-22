@@ -25,6 +25,11 @@ html="""
 <head>
 <title>鼓浪屿每日在岛人数</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body {background:#FFE780;color:#B34700;}
+.day_bar {background:#FF8000;color:white;display:inline-block;display:-moz-inline-box;}
+.weekend {color:#FF6500}
+</style>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -50,5 +55,5 @@ for d,s in daily[-30:]:
     
     weekend=date.weekday()>4
 
-    d=d if not weekend else "<font color=red>%s</font>"%(d,)
-    print(d,'<span style="background:blue;display:inline-block;display:-moz-inline-box;width:%ipx;" >%i</span>'%(x*2,s),"<br/>",file=file)
+    d=d if not weekend else "<font class='weekend'>%s</font>"%(d,)
+    print(d,'&nbsp;&nbsp;<span class="day_bar" style="width:%ipx;" >%.1f万</span>'%(x*2,s/10000),"<br/>",file=file)
