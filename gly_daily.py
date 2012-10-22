@@ -56,4 +56,4 @@ for d,s in daily[-30:]:
     weekend=date.weekday()>4
 
     d=d if not weekend else "<font class='weekend'>%s</font>"%(d,)
-    print(d,'&nbsp;&nbsp;<span class="day_bar" style="width:%ipx;" >%.1f万</span>'%(x*2,s/10000),"<br/>",file=file)
+    print(d,'&nbsp;&nbsp;<span class="day_bar" style="width:%ipx;" >&nbsp;%.1f万</span>'%(x*2,s/10000),"<br/>",file=file)
